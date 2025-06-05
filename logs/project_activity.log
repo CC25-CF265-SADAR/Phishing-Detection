@@ -6861,3 +6861,27 @@ AttributeError: 'list' object has no attribute 'empty'
 2025-06-02 11:14:26 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://www.dicoding.com/academies/319/corridor. Total fitur: 21
 2025-06-02 11:14:26 - __main__ - INFO - Prediksi untuk 'https://www.dicoding.com/academies/319/corridor': Tipe='Aman', Prob_Phishing=0.0445 (Threshold: 0.5)
 2025-06-02 11:14:33 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-04 21:20:24 - root - INFO - Konfigurasi logging selesai.
+2025-06-04 21:20:24 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-04 21:20:25 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-04 21:20:25 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-04 21:20:25 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\Phishing-Detection\src\models\model_checkpoints_recall_focused\best_recall_model.keras
+2025-06-04 21:20:25 - __main__ - INFO - Path preprocessor (file objek terpisah): Tidak digunakan
+2025-06-04 21:20:25 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-04 21:20:49 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\Phishing-Detection\src\models\model_checkpoints_recall_focused\best_recall_model.keras
+2025-06-04 21:20:49 - __main__ - INFO - Model berhasil dimuat.
+2025-06-04 21:20:49 - __main__ - INFO - Tidak ada path preprocessor yang ditentukan atau preprocessor tidak digunakan.
+2025-06-04 21:23:33 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-04 21:23:33 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-04 21:23:33 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-04 21:23:33 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\Phishing-Detection\src\models\model_checkpoints_recall_focused\best_recall_model.keras
+2025-06-04 21:23:33 - __main__ - INFO - Path preprocessor (file objek terpisah): Tidak digunakan
+2025-06-04 21:23:33 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-04 21:23:36 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\Phishing-Detection\src\models\model_checkpoints_recall_focused\best_recall_model.keras
+2025-06-04 21:23:36 - __main__ - INFO - Model berhasil dimuat.
+2025-06-04 21:23:36 - __main__ - INFO - Tidak ada path preprocessor yang ditentukan atau preprocessor tidak digunakan.
+2025-06-04 21:23:43 - __main__ - INFO - Memproses URL: https://railway.com/dashboard
+2025-06-04 21:23:43 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://railway.com/dashboard
+2025-06-04 21:23:44 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://railway.com/dashboard. Total fitur: 21
+2025-06-04 21:23:44 - __main__ - INFO - Prediksi untuk 'https://railway.com/dashboard': Tipe='Aman', Prob_Phishing=0.0498 (Threshold: 0.5)
+2025-06-04 21:23:49 - __main__ - INFO - Keluar dari mode inferensi.

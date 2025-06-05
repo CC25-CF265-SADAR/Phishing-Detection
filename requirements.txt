@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+gunicorn
+tensorflow
+numpy
+pandas
+requests
+beautifulsoup4
+python-whois
+h5py
+scikit-learn # Hanya jika Anda menggunakannya untuk sesuatu selain train_test_split (misalnya, preprocessor terpisah)
+# joblib # Hanya jika Anda menyimpan/memuat objek preprocessor terpisah
+python-multipart # Diperlukan oleh FastAPI untuk Form(...) jika belum termasuk dalam uvicorn[standard]
