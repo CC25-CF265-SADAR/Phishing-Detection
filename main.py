@@ -195,40 +195,40 @@ def get_prediction_for_url(url_string: str, threshold: float = 0.5) -> Tuple[Opt
 
 # --- 6. Definisi Rute (Endpoints) FastAPI ---
 
-# HTML untuk halaman input dan hasil (disimpan sebagai string untuk kesederhanaan)
-HTML_FORM_PAGE = """
-<!doctype html>
-<html lang="id">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Detektor URL Phishing</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Detektor URL Phishing</h1>
-        <form action="/predict" method="post">
-            <label for="url_input">Masukkan URL untuk diperiksa:</label>
-            <input type="text" id="url_input" name="url_input" value="{input_url_display}" placeholder="Contoh: http://example.com" required>
-            <input type="submit" value="Periksa URL">
-        </form>
-        <div class="result-container">
-            {result_content}
-        </div>
-        {back_link_content}
-        <div class="footer">Aplikasi Deteksi Phishing</div>
-    </div>
-</body>
-</html>
-"""
+# # HTML untuk halaman input dan hasil (disimpan sebagai string untuk kesederhanaan)
+# HTML_FORM_PAGE = """
+# <!doctype html>
+# <html lang="id">
+# <head>
+#     <meta charset="utf-8">
+#     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+#     <title>Detektor URL Phishing</title>
+# </head>
+# <body>
+#     <div class="container">
+#         <h1>Detektor URL Phishing</h1>
+#         <form action="/predict" method="post">
+#             <label for="url_input">Masukkan URL untuk diperiksa:</label>
+#             <input type="text" id="url_input" name="url_input" value="{input_url_display}" placeholder="Contoh: http://example.com" required>
+#             <input type="submit" value="Periksa URL">
+#         </form>
+#         <div class="result-container">
+#             {result_content}
+#         </div>
+#         {back_link_content}
+#         <div class="footer">Aplikasi Deteksi Phishing</div>
+#     </div>
+# </body>
+# </html>
+# """
 
-@app.get("/", response_class=HTMLResponse)
-async def read_root_form(request: Request):
-    # Cetak ini untuk memastikan HTML_FORM_PAGE yang benar digunakan
-    # print("--- Konten HTML_FORM_PAGE di read_root_form ---")
-    # print(HTML_FORM_PAGE[:500]) # Cetak 500 karakter pertama untuk verifikasi
-    # print("--- Akhir Konten HTML_FORM_PAGE ---")
-    return HTMLResponse(content=HTML_FORM_PAGE.format(input_url_display="", result_content="", back_link_content=""))
+# @app.get("/", response_class=HTMLResponse)
+# async def read_root_form(request: Request):
+#     # Cetak ini untuk memastikan HTML_FORM_PAGE yang benar digunakan
+#     # print("--- Konten HTML_FORM_PAGE di read_root_form ---")
+#     # print(HTML_FORM_PAGE[:500]) # Cetak 500 karakter pertama untuk verifikasi
+#     # print("--- Akhir Konten HTML_FORM_PAGE ---")
+#     return HTMLResponse(content=HTML_FORM_PAGE.format(input_url_display="", result_content="", back_link_content=""))
 
 @app.post("/predict", response_class=HTMLResponse)
 async def handle_predict_form(request: Request, url_input: str = Form(...)):
