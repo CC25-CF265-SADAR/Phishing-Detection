@@ -230,34 +230,6 @@ def get_prediction_for_url(url_string: str, threshold: float = 0.5) -> Tuple[Opt
 #     # print("--- Akhir Konten HTML_FORM_PAGE ---")
 #     return HTMLResponse(content=HTML_FORM_PAGE.format(input_url_display="", result_content="", back_link_content=""))
 
-@app.post("/predict", response_class=HTMLResponse)
-async def handle_predict_form(request: Request, url_input: str = Form(...)):
-    # BARIS-BARIS BERIKUTNYA HARUS DI-INDENTASI
-    prediction_result_str: Optional[str] = None # <--- TAMBAHKAN INDENTASI
-    prediction_proba_str: Optional[str] = None  # <--- TAMBAHKAN INDENTASI
-    error_message_str: Optional[str] = None     # <--- TAMBAHKAN INDENTASI
-    result_html_block = ""                      # <--- TAMBAHKAN INDENTASI
-
-    if not url_input:                           # <--- TAMBAHKAN INDENTASI (dst.)
-        error_message_str = "Silakan masukkan URL untuk diperiksa."
-    else:
-        predicted_type, proba, err = get_prediction_for_url(url_input) # Menggunakan fungsi yang sudah diglobal
-    if err:
-        error_message_str = err
-    else:
-        prediction_result_str = predicted_type
-        prediction_proba_str = f"{proba:.4f}" if proba is not None else "N/A"
-
-    if error_message_str:
-        result_html_block = f'<div class="result error"><strong>Error:</strong> {error_message_str}</div>'
-    elif prediction_result_str:
-        result_class = 'phishing' if prediction_result_str == 'Phishing' else 'aman' if prediction_result_str == 'Aman' else 'error'
-        proba_html = f'<p class="probability">(Probabilitas Phishing: {prediction_proba_str})</p>' if prediction_proba_str != "N/A" and prediction_result_str != 'Error' else ''
-        result_html_block = f'<div class="result {result_class}"><strong>Hasil Deteksi: {prediction_result_str}</strong>{proba_html}</div>'
-
-    back_link_html = '<a href="/" class="back-link">← Periksa URL Lain</a>'
-    return HTMLResponse(content=HTML_FORM_PAGE.format(input_url_display=url_input, result_content=result_html_block, back_link_content=back_link_html))
-
 @app.post("/api/predict", response_model=PredictionResponse)
 async def api_predict_url(item: URLInput):
     # BARIS-BARIS BERIKUTNYA HARUS DI-INDENTASI
