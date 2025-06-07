@@ -12,7 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from fastapi import FastAPI, Request, Form, HTTPException
 from fastapi.responses import HTMLResponse
-from pydantic import BaseModel, HttpUrl # Untuk validasi URL input
+from pydantic import BaseModel 
 
 # --- 1. Pengaturan Path dan Impor Modul Internal ---
 
@@ -129,7 +129,7 @@ app.router.lifespan_context = lifespan
 
 # --- 4. Pydantic Models untuk Validasi Data API ---
 class URLInput(BaseModel):
-    url: HttpUrl # Pydantic akan memvalidasi bahwa ini adalah URL yang valid # <--- TAMBAHKAN INDENTASI
+    url: str # Pydantic akan memvalidasi bahwa ini adalah URL yang valid # <--- TAMBAHKAN INDENTASI
 
 class PredictionResponse(BaseModel): # Pastikan ini juga di-indentasi dengan benar jika ada setelahnya
     url: str                             # <--- TAMBAHKAN INDENTASI
