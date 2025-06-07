@@ -1,3 +1,7 @@
+
+
+
+
 # main.py
 
 import os
@@ -6,6 +10,7 @@ from pathlib import Path
 from typing import Optional, Tuple, Any, List, Dict # <--- TAMBAHKAN Dict DI SINI
 
 import numpy as np
+from fastapi.middleware.cors import CORSMiddleware
 
 # import pandas as pd # Hanya jika 'extract_features' Anda membutuhkannya secara internal
 
@@ -47,11 +52,26 @@ except Exception as e_other_import_error: # Menangkap error lain saat impor
     
 # --- 2. Inisialisasi Aplikasi FastAPI ---
 
+origins = [
+    "*", 
+    # "http://localhost", 
+    # "http://localhost:3000", # Untuk frontend development
+    # "https://domain-frontend-anda.com", # Untuk produksi
+]
+
 # Inisialisasi Aplikasi FastAPI
 app = FastAPI(
     title="Detektor URL Phishing API",
     description="API untuk mendeteksi apakah sebuah URL berpotensi phishing.",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True, # Izinkan cookies jika diperlukan
+    allow_methods=["*"],    # Izinkan semua metode HTTP (GET, POST, PUT, DELETE, dll.)
+    allow_headers=["*"],    # Izinkan semua header HTTP
 )
 
 # --- 3. Variabel Global untuk Model ---
