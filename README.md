@@ -181,7 +181,7 @@ Aplikasi menyediakan endpoint utama untuk melakukan prediksi URL phishing melalu
 ```
 
 ### 🔸 Contoh Permintaan menggunakan curl
-````bash
+```bash
 curl -X POST "http://localhost:8000/api/predict" \
   -H "Content-Type: application/json" \
   -d '{"url": "https://contoh.com"}'
