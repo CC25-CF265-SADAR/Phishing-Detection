@@ -26,8 +26,8 @@ if str(project_root_path) not in sys.path:
 
 # Impor fungsi ekstraksi fitur
 try:
-    from src.features.feature_extractor import extract_features
-    print("Fungsi 'extract_features' dari src.features.feature_extractor berhasil diimpor.")
+    from src.features.feature_extractor_shortener import extract_features
+    print("Fungsi 'extract_features' dari src.features.feature_extractor_shortener berhasil diimpor.")
 except ImportError as e_fe:
     print(f"KRITIKAL: GAGAL mengimpor 'extract_features': {e_fe}. Aplikasi tidak akan dapat melakukan prediksi.")
     # Definisikan fungsi placeholder
@@ -36,7 +36,7 @@ except ImportError as e_fe:
         print("!!! MENGGUNAKAN FUNGSI 'extract_features' PLACEHOLDER KARENA IMPOR GAGAL !!!")
         raise RuntimeError( # Ini adalah line 39 jika dihitung dari 'try'
             "Fungsi 'extract_features' yang valid tidak dapat dimuat. "
-            "Periksa path dan file src/features/feature_extractor.py, serta dependensinya."
+            "Periksa path dan file src/features/feature_extractor_shortener.py, serta dependensinya."
         )
 except Exception as e_other_import_error: # Menangkap error lain saat impor
     print(f"KRITIKAL: Error tak terduga saat mengimpor 'extract_features': {e_other_import_error}.")
@@ -77,7 +77,7 @@ app.add_middleware(
 app_state: Dict[str, Any] = {}
 
 # Path ke model Anda yang sudah dilatih
-SAVED_MODEL_PATH = project_root_path / "models_trained" / "best_recall_model.h5"
+SAVED_MODEL_PATH = project_root_path / "models_trained" / "best_recall_model_url shortener case.h5"
 # SAVED_PREPROCESSOR_PATH = None # Jika Anda punya preprocessor terpisah
 
 # --- BARU: Lifespan Event Handler ---
@@ -169,7 +169,7 @@ def get_prediction_for_url(url_string: str, threshold: float = 0.5) -> Tuple[Opt
         #     features_processed = preprocessor.transform(features_2d)
         # else:
         #     features_processed = features_2d
-        features_processed = features_2d # Karena kita asumsikan preprocessor tidak ada/sudah di feature_extractor
+        features_processed = features_2d # Karena kita asumsikan preprocessor tidak ada/sudah di feature_extractor_shortener
 
         prediction_proba = model.predict(features_processed)
         
