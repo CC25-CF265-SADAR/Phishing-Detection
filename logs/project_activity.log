@@ -991,3 +991,68 @@
 2025-06-08 18:53:46 - matplotlib.font_manager - DEBUG - findfont: score(FontEntry(fname='C:\\Users\\Dzulfahmi DA\\AppData\\Local\\Microsoft\\Windows\\Fonts\\fontawesome5-solid-webfont.ttf', name='Font Awesome 5 Free Solid', style='normal', variant='normal', weight=900, stretch='normal', size='scalable')) = 10.525
 2025-06-08 18:53:46 - matplotlib.font_manager - DEBUG - findfont: score(FontEntry(fname='C:\\Users\\Dzulfahmi DA\\AppData\\Local\\Microsoft\\Windows\\Fonts\\REVOLUTION.ttf', name='REVOLUTION', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
 2025-06-08 18:53:46 - matplotlib.font_manager - DEBUG - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=16.0 to DejaVu Sans ('c:\\Users\\Dzulfahmi DA\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000.
+2025-06-08 18:55:26 - absl - WARNING - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=h5
+2025-06-08 18:55:26 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-06-08 18:55:26 - h5py._conv - DEBUG - Creating converter from 5 to 3
+2025-06-08 18:56:40 - root - INFO - Konfigurasi logging selesai.
+2025-06-08 18:56:40 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-08 18:56:40 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-08 18:56:40 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-08 18:56:40 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\Phishing-Detection\src\models\model_checkpoints_recall_focused\best_recall_model.keras
+2025-06-08 18:56:40 - __main__ - INFO - Path preprocessor (file objek terpisah): Tidak digunakan
+2025-06-08 18:56:40 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-08 18:57:41 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-08 18:57:41 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-08 18:57:41 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-08 18:57:41 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\Phishing-Detection\src\models\model_checkpoints_recall_focused\best_recall_model_url shortener case.keras
+2025-06-08 18:57:41 - __main__ - INFO - Path preprocessor (file objek terpisah): Tidak digunakan
+2025-06-08 18:57:41 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-08 18:57:51 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\Phishing-Detection\src\models\model_checkpoints_recall_focused\best_recall_model_url shortener case.keras
+2025-06-08 18:57:51 - __main__ - INFO - Model berhasil dimuat.
+2025-06-08 18:57:51 - __main__ - INFO - Tidak ada path preprocessor yang ditentukan atau preprocessor tidak digunakan.
+2025-06-08 18:58:10 - __main__ - INFO - Memproses URL: https://bit.ly/InfoBeasiswaBCAF2025
+2025-06-08 18:58:10 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://bit.ly/InfoBeasiswaBCAF2025
+2025-06-08 18:58:10 - FeatureExtractor - INFO - Mengecek apakah https://bit.ly/InfoBeasiswaBCAF2025 adalah URL shortener.
+2025-06-08 18:58:11 - FeatureExtractor - INFO - URL berhasil diperluas dari https://bit.ly/InfoBeasiswaBCAF2025 menjadi https://bcafinance.co.id/Pendaftaran-Beasiswa-BCA-Finance-Peduli-2025-Dibuka
+2025-06-08 18:58:12 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://bcafinance.co.id/Pendaftaran-Beasiswa-BCA-Finance-Peduli-2025-Dibuka. Total fitur: 21
+2025-06-08 18:58:12 - __main__ - INFO - Prediksi untuk 'https://bit.ly/InfoBeasiswaBCAF2025': Tipe='Aman', Prob_Phishing=0.0165 (Threshold: 0.5)
+2025-06-08 18:58:21 - __main__ - INFO - Memproses URL: https://bit.ly/pelacakbarangtertinggaltj
+2025-06-08 18:58:21 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://bit.ly/pelacakbarangtertinggaltj
+2025-06-08 18:58:21 - FeatureExtractor - INFO - Mengecek apakah https://bit.ly/pelacakbarangtertinggaltj adalah URL shortener.
+2025-06-08 18:58:22 - FeatureExtractor - INFO - URL berhasil diperluas dari https://bit.ly/pelacakbarangtertinggaltj menjadi https://script.google.com/macros/s/AKfycbynOidBhqqktK5M4eFIwVjNIoqKnYg_UWjUK1c50IFni8lTDu6TagZrm2h65lXp03Rs/exec
+2025-06-08 18:58:24 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://script.google.com/macros/s/AKfycbynOidBhqqktK5M4eFIwVjNIoqKnYg_UWjUK1c50IFni8lTDu6TagZrm2h65lXp03Rs/exec. Total fitur: 21
+2025-06-08 18:58:24 - __main__ - INFO - Prediksi untuk 'https://bit.ly/pelacakbarangtertinggaltj': Tipe='Aman', Prob_Phishing=0.1357 (Threshold: 0.5)
+2025-06-08 18:58:28 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-08 18:59:36 - root - INFO - Konfigurasi logging selesai.
+2025-06-08 18:59:36 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-08 18:59:36 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-08 18:59:36 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-08 18:59:36 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\Phishing-Detection\src\models\model_checkpoints_recall_focused\best_recall_model.keras
+2025-06-08 18:59:36 - __main__ - INFO - Path preprocessor (file objek terpisah): Tidak digunakan
+2025-06-08 18:59:36 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-08 18:59:39 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\Phishing-Detection\src\models\model_checkpoints_recall_focused\best_recall_model.keras
+2025-06-08 18:59:40 - __main__ - INFO - Model berhasil dimuat.
+2025-06-08 18:59:40 - __main__ - INFO - Tidak ada path preprocessor yang ditentukan atau preprocessor tidak digunakan.
+2025-06-08 18:59:43 - __main__ - INFO - Memproses URL: https://bit.ly/pelacakbarangtertinggaltj
+2025-06-08 18:59:43 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://bit.ly/pelacakbarangtertinggaltj
+2025-06-08 18:59:45 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://bit.ly/pelacakbarangtertinggaltj. Total fitur: 21
+2025-06-08 18:59:45 - __main__ - INFO - Prediksi untuk 'https://bit.ly/pelacakbarangtertinggaltj': Tipe='Aman', Prob_Phishing=0.0265 (Threshold: 0.5)
+2025-06-08 18:59:53 - __main__ - INFO - Memproses URL: https://bit.ly/InfoBeasiswaBCAF2025
+2025-06-08 18:59:53 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://bit.ly/InfoBeasiswaBCAF2025
+2025-06-08 18:59:53 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://bit.ly/InfoBeasiswaBCAF2025. Total fitur: 21
+2025-06-08 18:59:54 - __main__ - INFO - Prediksi untuk 'https://bit.ly/InfoBeasiswaBCAF2025': Tipe='Aman', Prob_Phishing=0.0612 (Threshold: 0.5)
+2025-06-08 18:59:59 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-08 19:00:47 - __main__ - INFO - Memproses URL: https://bit.ly/skripsirheza
+2025-06-08 19:00:47 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://bit.ly/skripsirheza
+2025-06-08 19:00:47 - FeatureExtractor - INFO - Mengecek apakah https://bit.ly/skripsirheza adalah URL shortener.
+2025-06-08 19:00:51 - FeatureExtractor - INFO - URL berhasil diperluas dari https://bit.ly/skripsirheza menjadi https://docs.google.com/forms/d/e/1FAIpQLSdolVGHyO3fY-MAL4MZA6VYvFgm_8nIFi_cd3SlpV_5NcZSaA/closedform
+2025-06-08 19:00:52 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://docs.google.com/forms/d/e/1FAIpQLSdolVGHyO3fY-MAL4MZA6VYvFgm_8nIFi_cd3SlpV_5NcZSaA/closedform. Total fitur: 21
+2025-06-08 19:00:52 - __main__ - INFO - Prediksi untuk 'https://bit.ly/skripsirheza': Tipe='Aman', Prob_Phishing=0.2634 (Threshold: 0.5)
+2025-06-08 19:00:58 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-08 19:01:03 - __main__ - INFO - Memproses URL: https://bit.ly/skripsirheza
+2025-06-08 19:01:03 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://bit.ly/skripsirheza
+2025-06-08 19:01:05 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://bit.ly/skripsirheza. Total fitur: 21
+2025-06-08 19:01:06 - __main__ - INFO - Prediksi untuk 'https://bit.ly/skripsirheza': Tipe='Aman', Prob_Phishing=0.0757 (Threshold: 0.5)
+2025-06-08 19:01:10 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-08 19:12:32 - absl - WARNING - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=h5
+2025-06-08 19:12:32 - absl - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
