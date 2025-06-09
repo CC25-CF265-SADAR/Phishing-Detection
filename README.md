@@ -2,7 +2,7 @@
 
 ![Deteksi Phishing](https://placehold.co/1200x300/2c3e50/ffffff?text=Phishing+URL+Detector&font=lato)
 
-Aplikasi web dan API berbasis FastAPI yang memanfaatkan model *deep learning* (TensorFlow/Keras) untuk mengklasifikasikan sebuah URL sebagai "Aman" atau "Phishing". Proyek ini merupakan bagian dari program [NAMA PROGRAM, mis. Bangkit, Studi Independen], dengan fokus pada penerapan *machine learning* untuk keamanan siber.
+Aplikasi web dan API berbasis FastAPI yang memanfaatkan model *deep learning* (TensorFlow/Keras) untuk mengklasifikasikan sebuah URL sebagai "Aman" atau "Phishing". Proyek ini merupakan bagian dari program Coding Camp 2025, dengan fokus pada penerapan *machine learning* untuk keamanan siber.
 
 ## 📜 Daftar Isi
 
