@@ -2,7 +2,7 @@
 
 ![Deteksi Phishing](https://placehold.co/1200x300/2c3e50/ffffff?text=Phishing+URL+Detector&font=lato)
 
-Aplikasi web dan API berbasis FastAPI yang memanfaatkan model *deep learning* (TensorFlow/Keras) untuk mengklasifikasikan sebuah URL sebagai "Aman" atau "Phishing". Proyek ini merupakan bagian dari program Coding Camp 2025, dengan fokus pada penerapan *machine learning* untuk keamanan siber.
+Aplikasi web dan API berbasis FastAPI yang memanfaatkan model *deep learning* (TensorFlow/Keras) untuk mengklasifikasikan sebuah URL sebagai "Aman" atau "Phishing".
 
 ## 📜 Daftar Isi
 
@@ -22,7 +22,6 @@ Aplikasi web dan API berbasis FastAPI yang memanfaatkan model *deep learning* (T
   - **Penanganan URL Shortener**: Mampu mengikuti pengalihan dari URL *shortener* untuk menganalisis URL tujuan yang sebenarnya, meningkatkan akurasi deteksi.
   - **Ekstraksi Fitur Komprehensif**: Menggunakan lebih dari 20 fitur yang diekstrak dari URL, termasuk fitur leksikal, berbasis domain, dan berbasis konten HTML.
   - **Siap Deployment**: Dikonfigurasi untuk deployment ke platform cloud modern seperti Vercel atau Railway menggunakan `Dockerfile`.
-  - **Dokumentasi Otomatis**: Dilengkapi dokumentasi API interaktif yang dibuat secara otomatis oleh FastAPI (tersedia di `/docs`).
 
 ## 📁 Struktur Proyek
 
@@ -43,8 +42,7 @@ Phishing-Detection/
 ├── tests/                 # Unit test dan integrasi
 ├── main.py                # Entry point aplikasi FastAPI
 ├── requirements.txt       # Daftar dependensi Python
-├── Dockerfile             # Konfigurasi Docker untuk containerization
-└── vercel.json            # Konfigurasi deployment ke Vercel (opsional)
+└── Dockerfile             # Konfigurasi Docker untuk containerization
 ```
 ## 🚀 Teknologi yang Digunakan
 
@@ -260,11 +258,6 @@ Aplikasi ini telah dikonfigurasi agar dapat dideploy ke berbagai platform modern
   - Membangun image
   - Menyediakan endpoint publik untuk aplikasi Anda
 
-### ⚙️ Vercel (Opsional)
-
-- Aplikasi juga dapat dijalankan di [Vercel](https://vercel.com/) dengan konfigurasi `vercel.json`.
-- Pastikan Anda menggunakan `@vercel/python` sebagai builder untuk proyek FastAPI.
-- File `vercel.json` telah disiapkan untuk memetakan handler ke `main.py`.
 
 ### 📁 Berkas yang Wajib Ada untuk Deployment
 
