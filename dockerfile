@@ -1,5 +1,3 @@
-# Dockerfile
-
 # 1. Gunakan image dasar Python resmi.
 FROM python:3.11-slim
 
