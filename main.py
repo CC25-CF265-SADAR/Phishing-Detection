@@ -1,9 +1,7 @@
-# main.py
-
 import os
 import sys
 from pathlib import Path
-from typing import Optional, Tuple, Any, List, Dict # <--- TAMBAHKAN Dict DI SINI
+from typing import Optional, Tuple, Any, List, Dict 
 
 import numpy as np
 from fastapi.middleware.cors import CORSMiddleware
@@ -13,8 +11,6 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel 
 
 # --- 1. Pengaturan Path dan Impor Modul Internal ---
-
-# Asumsi main.py ada di root proyek (sejajar dengan folder 'src')
 project_root_path = Path(__file__).resolve().parent
 if str(project_root_path) not in sys.path:
     sys.path.append(str(project_root_path)) 
@@ -82,7 +78,7 @@ async def lifespan(current_app: FastAPI):
     model_to_load = None
     try:
         if SAVED_MODEL_PATH.exists():
-            from tensorflow import keras # Impor di sini untuk menjaga scope
+            from tensorflow import keras 
             model_to_load = keras.models.load_model(SAVED_MODEL_PATH)
             print(f"Model Keras berhasil dimuat dari: {SAVED_MODEL_PATH}")
         else:
@@ -95,7 +91,7 @@ async def lifespan(current_app: FastAPI):
 
     print("--- Startup Aplikasi Selesai ---")
     yield # Ini adalah titik di mana aplikasi akan berjalan
-    # Kode yang dijalankan saat shutdown (opsional)
+    # Kode yang dijalankan saat shutdown
     print("--- Aplikasi Berhenti ---")
     app_state.clear() # Bersihkan state jika perlu
 
@@ -218,8 +214,7 @@ async def api_predict_url(item: URLInput):
     predicted_type, proba, err_msg = get_prediction_for_url(str(item.url)) 
 
     if err_msg:                                                               
-        # Untuk API, lebih baik mengembalikan status error HTTP yang sesuai jika memungkinkan
-        # raise HTTPException(status_code=400, detail=err_msg) # Contoh jika input buruk
+
         return PredictionResponse(url=str(item.url), predicted_type="Error", error=err_msg)
 
     return PredictionResponse(
