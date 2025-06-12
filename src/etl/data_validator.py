@@ -3,14 +3,9 @@
 import pandas as pd
 import numpy as np
 import re
-# Menggunakan logger yang sudah Anda siapkan dari src.utils.logger
-# Asumsi setup_logging() sudah dipanggil di entry point aplikasi Anda (misal, main.py)
-# sehingga logging.getLogger(__name__) akan mendapatkan logger yang terkonfigurasi.
 import logging 
 from typing import Dict, List, Any, Optional, Callable, Tuple, Union
 
-# Dapatkan logger untuk modul ini
-# Nama logger akan menjadi 'src.etl.data_validator' jika dipanggil dari sini
 logger = logging.getLogger(__name__)
 
 class DataValidationError(Exception):

@@ -5,7 +5,7 @@ import logging.handlers
 import sys
 import os
 from pathlib import Path
-from typing import Union # <--- TAMBAHKAN IMPORT INI
+from typing import Union 
 
 # Tentukan level logging default dan format pesan
 DEFAULT_LOG_LEVEL = logging.INFO
@@ -13,14 +13,13 @@ DEFAULT_LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d %H:%M:%S'
 
 # Tentukan path untuk file log
-# Biasanya disimpan di folder 'logs' di root proyek
-# Kita asumsikan logger.py ada di src/utils/, jadi kita naik dua level untuk root proyek
+
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 LOGS_DIR = PROJECT_ROOT / "logs"
 LOG_FILE_PATH = LOGS_DIR / "project_activity.log"
 
 # Konfigurasi untuk rotasi file log
-LOG_FILE_MAX_BYTES = 1024 * 1024 * 5  # 5 MB (pastikan spasi standar)
+LOG_FILE_MAX_BYTES = 1024 * 1024 * 5  
 LOG_FILE_BACKUP_COUNT = 5 # Simpan 5 file backup
 
 # Pastikan direktori logs ada
@@ -91,7 +90,7 @@ def get_logger(name: str) -> logging.Logger:
     """
     return logging.getLogger(name)
 
-# # --- Contoh Penggunaan (bisa dihapus atau dikomentari di file produksi) ---
+# # --- Contoh Penggunaan ---
 # if __name__ == "__main__":
 #     setup_logging(log_level=logging.DEBUG)
 

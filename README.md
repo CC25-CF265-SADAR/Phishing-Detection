@@ -34,12 +34,12 @@ Phishing-Detection/
 ├── notebooks/             # Jupyter Notebook untuk eksperimen dan analisis data
 ├── reports/               # Laporan, grafik evaluasi, dan dokumentasi visual
 ├── src/                   # Kode sumber utama
-│   ├── etl/               # Pipeline ETL: ekstraksi, transformasi, dan pemuatan data
-│   ├── features/          # Logika ekstraksi fitur dari URL (termasuk shortener)
-│   ├── models/            # Skrip training, evaluasi, dan tuning model
-│   ├── utils/             # Fungsi pembantu: konfigurasi, logging, validasi input
-│   └── visualization/     # Pembuatan plot dan visualisasi
-├── tests/                 # Unit test dan integrasi
+│   ├── etl/               # Pipeline ETL: data validator
+│   ├── features/          # Logika ekstraksi fitur dari URL 
+│   ├── models/            # Skrip modelling
+│   ├── utils/             # Fungsi pembantu: logging, progress_display
+│   └── visualization/     # Fungsi pembantu: pembuatan plot dan visualisasi
+├── tests/                 # Test model
 ├── main.py                # Entry point aplikasi FastAPI
 ├── requirements.txt       # Daftar dependensi Python
 └── Dockerfile             # Konfigurasi Docker untuk containerization
@@ -67,8 +67,7 @@ Proyek ini memanfaatkan berbagai pustaka dan alat modern untuk mendukung pengemb
 
 - **Deployment**:
   - Docker — containerization untuk deployment lintas platform
-  - Vercel — deployment serverless (opsional)
-  - Railway — platform deployment berbasis Docker (opsional)
+  - Railway — platform deployment berbasis Docker
 
 - **Tools Lain**:
   - Jupyter Notebook — eksplorasi data dan eksperimen model
@@ -234,9 +233,8 @@ Proses pengembangan model deteksi phishing dalam proyek ini mengikuti alur berik
    - `URL_Blacklist_Status`
 
 4. **Pelatihan Model**  
-   Model *deep learning* dibangun menggunakan TensorFlow/Keras dan dilatih melalui `src/models/train_model.py`.  
+   Model *deep learning* dibangun menggunakan TensorFlow/Keras dan dilatih melalui `src/models/modelling.ipynb`.  
    Eksperimen dilakukan di `notebooks/models_playground.ipynb`.
-
 5. **Evaluasi Model**  
    Model dievaluasi menggunakan metrik:
    - **Akurasi**
@@ -266,15 +264,7 @@ Pastikan semua berkas berikut tersedia di root repositori:
 - `main.py`
 - `requirements.txt`
 - `Dockerfile` (untuk Railway)
-- `vercel.json` (untuk Vercel, opsional)
 - Folder `src/` (berisi seluruh kode sumber)
 - Folder `models_trained/` (berisi model `.h5`)
 
 ---
-
-Setelah deployment, aplikasi akan tersedia secara publik dengan endpoint seperti:
-> https://phishing-detector-production.up.railway.app/
-
-> https://phishing-detector.vercel.app/
-
-(Alamat bergantung pada konfigurasi dan nama proyek Anda di platform terkait.)

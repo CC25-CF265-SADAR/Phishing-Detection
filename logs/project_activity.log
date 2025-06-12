@@ -1101,3 +1101,125 @@
 2025-06-08 19:51:28 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://bcafinance.co.id/Pendaftaran-Beasiswa-BCA-Finance-Peduli-2025-Dibuka. Total fitur: 21
 2025-06-08 19:51:28 - __main__ - INFO - Prediksi untuk 'bit.ly/InfoBeasiswaBCAF2025': Tipe='Aman', Prob_Phishing=0.0165 (Threshold: 0.5)
 2025-06-08 19:51:33 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-12 19:40:01 - root - INFO - Konfigurasi logging selesai.
+2025-06-12 19:40:01 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-12 19:40:01 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-12 19:40:01 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-12 19:40:01 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:40:01 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-12 19:40:13 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:40:13 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-12 19:40:13 - __main__ - INFO - Model berhasil dimuat.
+2025-06-12 19:40:26 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:40:26 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-12 19:40:26 - __main__ - INFO - Model berhasil dimuat.
+2025-06-12 19:41:41 - __main__ - INFO - Memproses URL: https://www.youtube.com/watch?v=V3LL7AW24ZE
+2025-06-12 19:41:41 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://www.youtube.com/watch?v=V3LL7AW24ZE
+2025-06-12 19:41:41 - FeatureExtractor - INFO - Mengecek apakah https://www.youtube.com/watch?v=V3LL7AW24ZE adalah URL shortener.
+2025-06-12 19:41:43 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://www.youtube.com/watch?v=V3LL7AW24ZE. Total fitur: 21
+2025-06-12 19:41:43 - __main__ - INFO - Prediksi untuk 'https://www.youtube.com/watch?v=V3LL7AW24ZE': Tipe='Aman', Prob_Phishing=0.0022 (Threshold: 0.5)
+2025-06-12 19:41:53 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-12 19:42:05 - root - INFO - Konfigurasi logging selesai.
+2025-06-12 19:42:05 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-12 19:42:05 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-12 19:42:05 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-12 19:42:05 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:42:05 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-12 19:42:08 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:42:08 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-12 19:42:08 - __main__ - INFO - Model berhasil dimuat.
+2025-06-12 19:42:36 - root - INFO - Konfigurasi logging selesai.
+2025-06-12 19:42:36 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-12 19:42:36 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-12 19:42:36 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-12 19:42:36 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:42:36 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-12 19:42:39 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:42:40 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-12 19:42:40 - __main__ - INFO - Model berhasil dimuat.
+2025-06-12 19:42:41 - __main__ - INFO - Memproses URL: https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb
+2025-06-12 19:42:41 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb
+2025-06-12 19:42:41 - FeatureExtractor - INFO - Mengecek apakah https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb adalah URL shortener.
+2025-06-12 19:42:43 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb. Total fitur: 21
+2025-06-12 19:42:43 - __main__ - INFO - Prediksi untuk 'https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb': Tipe='Aman', Prob_Phishing=0.0257 (Threshold: 0.5)
+2025-06-12 19:42:57 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-12 19:43:08 - root - INFO - Konfigurasi logging selesai.
+2025-06-12 19:43:08 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-12 19:43:08 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-12 19:43:08 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-12 19:43:08 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:43:08 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-12 19:43:11 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:43:11 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-12 19:43:11 - __main__ - INFO - Model berhasil dimuat.
+2025-06-12 19:43:14 - __main__ - INFO - Memproses URL: https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb
+2025-06-12 19:43:14 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb
+2025-06-12 19:43:14 - FeatureExtractor - INFO - Mengecek apakah https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb adalah URL shortener.
+2025-06-12 19:43:16 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb. Total fitur: 21
+2025-06-12 19:43:16 - __main__ - INFO - Prediksi untuk 'https://drive.google.com/drive/folders/1T2uzafkhfWmCRx9GRPht_dG2qZVgSbVb': Tipe='Aman', Prob_Phishing=0.0257 (Threshold: 0.5)
+2025-06-12 19:43:42 - root - INFO - Konfigurasi logging selesai.
+2025-06-12 19:43:42 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-12 19:43:42 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-12 19:43:42 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-12 19:43:42 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:43:42 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-12 19:43:45 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:43:45 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-12 19:43:45 - __main__ - INFO - Model berhasil dimuat.
+2025-06-12 19:43:47 - __main__ - INFO - Memproses URL: https://www.southerntiersurgical.com/?__cf_chl_rt_tk=GYRJe0iAN9FOZc3TnVghnFyFfFRrw6eGqI9bV7ECagw-1749732212-1.0.1.1-iDPhgVdmGHTerZjCWz2UQLCNR7yisylCKUsgwIEFCC0
+2025-06-12 19:43:47 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://www.southerntiersurgical.com/?__cf_chl_rt_tk=GYRJe0iAN9FOZc3TnVghnFyFfFRrw6eGqI9bV7ECagw-1749732212-1.0.1.1-iDPhgVdmGHTerZjCWz2UQLCNR7yisylCKUsgwIEFCC0
+2025-06-12 19:43:47 - FeatureExtractor - INFO - Mengecek apakah https://www.southerntiersurgical.com/?__cf_chl_rt_tk=GYRJe0iAN9FOZc3TnVghnFyFfFRrw6eGqI9bV7ECagw-1749732212-1.0.1.1-iDPhgVdmGHTerZjCWz2UQLCNR7yisylCKUsgwIEFCC0 adalah URL shortener.
+2025-06-12 19:43:48 - FeatureExtractor - ERROR - HTTP error saat mengambil URL 'https://www.southerntiersurgical.com/?__cf_chl_rt_tk=GYRJe0iAN9FOZc3TnVghnFyFfFRrw6eGqI9bV7ECagw-1749732212-1.0.1.1-iDPhgVdmGHTerZjCWz2UQLCNR7yisylCKUsgwIEFCC0': 403 Client Error: Forbidden for url: https://www.southerntiersurgical.com/?__cf_chl_rt_tk=GYRJe0iAN9FOZc3TnVghnFyFfFRrw6eGqI9bV7ECagw-1749732212-1.0.1.1-iDPhgVdmGHTerZjCWz2UQLCNR7yisylCKUsgwIEFCC0
+2025-06-12 19:43:48 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://www.southerntiersurgical.com/?__cf_chl_rt_tk=GYRJe0iAN9FOZc3TnVghnFyFfFRrw6eGqI9bV7ECagw-1749732212-1.0.1.1-iDPhgVdmGHTerZjCWz2UQLCNR7yisylCKUsgwIEFCC0. Total fitur: 21
+2025-06-12 19:43:48 - __main__ - INFO - Prediksi untuk 'https://www.southerntiersurgical.com/?__cf_chl_rt_tk=GYRJe0iAN9FOZc3TnVghnFyFfFRrw6eGqI9bV7ECagw-1749732212-1.0.1.1-iDPhgVdmGHTerZjCWz2UQLCNR7yisylCKUsgwIEFCC0': Tipe='Aman', Prob_Phishing=0.3745 (Threshold: 0.5)
+2025-06-12 19:43:56 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-12 19:43:59 - root - INFO - Konfigurasi logging selesai.
+2025-06-12 19:43:59 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-12 19:44:00 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-12 19:44:00 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-12 19:44:00 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:44:00 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-12 19:44:03 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:44:03 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-12 19:44:03 - __main__ - INFO - Model berhasil dimuat.
+2025-06-12 19:44:10 - __main__ - INFO - Memproses URL: https://www.youtube.com/
+2025-06-12 19:44:10 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://www.youtube.com/
+2025-06-12 19:44:10 - FeatureExtractor - INFO - Mengecek apakah https://www.youtube.com/ adalah URL shortener.
+2025-06-12 19:44:11 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://www.youtube.com/. Total fitur: 21
+2025-06-12 19:44:11 - __main__ - INFO - Prediksi untuk 'https://www.youtube.com/': Tipe='Aman', Prob_Phishing=0.0012 (Threshold: 0.5)
+2025-06-12 19:47:55 - __main__ - INFO - Memproses URL: https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180
+2025-06-12 19:47:55 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180
+2025-06-12 19:47:55 - FeatureExtractor - INFO - Mengecek apakah https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180 adalah URL shortener.
+2025-06-12 19:47:55 - FeatureExtractor - ERROR - Connection error saat mengambil URL 'https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180': HTTPSConnectionPool(host='awarefortification.top', port=443): Max retries exceeded with url: /b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000015D106F2FF0>: Failed to resolve 'awarefortification.top' ([Errno 11001] getaddrinfo failed)"))
+2025-06-12 19:47:55 - FeatureExtractor - WARNING - DNS resolution failed for domain awarefortification.top in blacklist check.
+2025-06-12 19:47:55 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180. Total fitur: 21
+2025-06-12 19:47:55 - __main__ - INFO - Prediksi untuk 'https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180': Tipe='Phishing', Prob_Phishing=0.9685 (Threshold: 0.5)
+2025-06-12 19:48:21 - __main__ - INFO - Keluar dari mode inferensi.
+2025-06-12 19:48:26 - root - INFO - Konfigurasi logging selesai.
+2025-06-12 19:48:26 - __main__ - INFO - Logger kustom berhasil di-setup dan didapatkan untuk notebook.
+2025-06-12 19:48:26 - __main__ - INFO - Fungsi 'extract_features' dari feature_extractor.py berhasil diimpor.
+2025-06-12 19:48:26 - __main__ - INFO - Setup awal tahap 1 notebook untuk inferensi URL tunggal selesai.
+2025-06-12 19:48:26 - __main__ - INFO - Path model yang akan digunakan: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:48:26 - __main__ - INFO - Setup awal tahap 2 notebook (path) untuk inferensi URL tunggal selesai.
+2025-06-12 19:48:30 - __main__ - INFO - Mencoba memuat model dari: d:\Capstone\ML - Phishing Detection\models_trained\best_recall_model_url shortener case.h5
+2025-06-12 19:48:30 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2025-06-12 19:48:30 - __main__ - INFO - Model berhasil dimuat.
+2025-06-12 19:49:27 - __main__ - INFO - Memproses URL: https://www.vouchers.news/alfamart?gp=1&js=1&uuid=1749732292.0025708484&other_args=eyJ1cmkiOiAiL2FsZmFtYXJ0IiwgImFyZ3MiOiAiIiwgInJlZmVyZXIiOiAiIiwgImFjY2VwdCI6ICJ0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSxpbWFnZS9hdmlmLGltYWdlL3dlYnAsaW1hZ2UvYXBuZywqLyo7cT0wLjgsYXBwbGljYXRpb24vc2lnbmVkLWV4Y2hhbmdlO3Y9YjM7cT0wLjcifQ==
+2025-06-12 19:49:27 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://www.vouchers.news/alfamart?gp=1&js=1&uuid=1749732292.0025708484&other_args=eyJ1cmkiOiAiL2FsZmFtYXJ0IiwgImFyZ3MiOiAiIiwgInJlZmVyZXIiOiAiIiwgImFjY2VwdCI6ICJ0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSxpbWFnZS9hdmlmLGltYWdlL3dlYnAsaW1hZ2UvYXBuZywqLyo7cT0wLjgsYXBwbGljYXRpb24vc2lnbmVkLWV4Y2hhbmdlO3Y9YjM7cT0wLjcifQ==
+2025-06-12 19:49:27 - FeatureExtractor - INFO - Mengecek apakah https://www.vouchers.news/alfamart?gp=1&js=1&uuid=1749732292.0025708484&other_args=eyJ1cmkiOiAiL2FsZmFtYXJ0IiwgImFyZ3MiOiAiIiwgInJlZmVyZXIiOiAiIiwgImFjY2VwdCI6ICJ0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSxpbWFnZS9hdmlmLGltYWdlL3dlYnAsaW1hZ2UvYXBuZywqLyo7cT0wLjgsYXBwbGljYXRpb24vc2lnbmVkLWV4Y2hhbmdlO3Y9YjM7cT0wLjcifQ== adalah URL shortener.
+2025-06-12 19:49:39 - FeatureExtractor - ERROR - Timeout saat mengambil URL 'https://www.vouchers.news/alfamart?gp=1&js=1&uuid=1749732292.0025708484&other_args=eyJ1cmkiOiAiL2FsZmFtYXJ0IiwgImFyZ3MiOiAiIiwgInJlZmVyZXIiOiAiIiwgImFjY2VwdCI6ICJ0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSxpbWFnZS9hdmlmLGltYWdlL3dlYnAsaW1hZ2UvYXBuZywqLyo7cT0wLjgsYXBwbGljYXRpb24vc2lnbmVkLWV4Y2hhbmdlO3Y9YjM7cT0wLjcifQ==': HTTPSConnectionPool(host='www.vouchers.news', port=443): Read timed out. (read timeout=10)
+2025-06-12 19:49:40 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://www.vouchers.news/alfamart?gp=1&js=1&uuid=1749732292.0025708484&other_args=eyJ1cmkiOiAiL2FsZmFtYXJ0IiwgImFyZ3MiOiAiIiwgInJlZmVyZXIiOiAiIiwgImFjY2VwdCI6ICJ0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSxpbWFnZS9hdmlmLGltYWdlL3dlYnAsaW1hZ2UvYXBuZywqLyo7cT0wLjgsYXBwbGljYXRpb24vc2lnbmVkLWV4Y2hhbmdlO3Y9YjM7cT0wLjcifQ==. Total fitur: 21
+2025-06-12 19:49:40 - __main__ - INFO - Prediksi untuk 'https://www.vouchers.news/alfamart?gp=1&js=1&uuid=1749732292.0025708484&other_args=eyJ1cmkiOiAiL2FsZmFtYXJ0IiwgImFyZ3MiOiAiIiwgInJlZmVyZXIiOiAiIiwgImFjY2VwdCI6ICJ0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSxpbWFnZS9hdmlmLGltYWdlL3dlYnAsaW1hZ2UvYXBuZywqLyo7cT0wLjgsYXBwbGljYXRpb24vc2lnbmVkLWV4Y2hhbmdlO3Y9YjM7cT0wLjcifQ==': Tipe='Phishing', Prob_Phishing=0.9618 (Threshold: 0.5)
+2025-06-12 19:49:44 - __main__ - INFO - Memproses URL: https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180
+2025-06-12 19:49:44 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180
+2025-06-12 19:49:44 - FeatureExtractor - INFO - Mengecek apakah https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180 adalah URL shortener.
+2025-06-12 19:49:44 - FeatureExtractor - ERROR - Connection error saat mengambil URL 'https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180': HTTPSConnectionPool(host='awarefortification.top', port=443): Max retries exceeded with url: /b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000021908CD10A0>: Failed to resolve 'awarefortification.top' ([Errno 11001] getaddrinfo failed)"))
+2025-06-12 19:49:44 - FeatureExtractor - WARNING - DNS resolution failed for domain awarefortification.top in blacklist check.
+2025-06-12 19:49:44 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180. Total fitur: 21
+2025-06-12 19:49:44 - __main__ - INFO - Prediksi untuk 'https://awarefortification.top/b6beVgR1R3FpQndhVwwzbAN9Ul5eR1Z_DT9KYFBCOD8dLSABRBYRVCoSBg4BMBUK?1724125847180': Tipe='Phishing', Prob_Phishing=0.9685 (Threshold: 0.5)
+2025-06-12 19:49:56 - __main__ - INFO - Memproses URL: https://alfamart.co.id/news-detail/Hati-hati-Situs-Kuis-Hoax-Atas-Nama-Alfamart
+2025-06-12 19:49:56 - FeatureExtractor - INFO - Memulai ekstraksi fitur untuk URL: https://alfamart.co.id/news-detail/Hati-hati-Situs-Kuis-Hoax-Atas-Nama-Alfamart
+2025-06-12 19:49:56 - FeatureExtractor - INFO - Mengecek apakah https://alfamart.co.id/news-detail/Hati-hati-Situs-Kuis-Hoax-Atas-Nama-Alfamart adalah URL shortener.
+2025-06-12 19:49:57 - FeatureExtractor - INFO - Selesai ekstraksi fitur untuk URL: https://alfamart.co.id/news-detail/Hati-hati-Situs-Kuis-Hoax-Atas-Nama-Alfamart. Total fitur: 21
+2025-06-12 19:49:57 - __main__ - INFO - Prediksi untuk 'https://alfamart.co.id/news-detail/Hati-hati-Situs-Kuis-Hoax-Atas-Nama-Alfamart': Tipe='Aman', Prob_Phishing=0.0052 (Threshold: 0.5)
+2025-06-12 19:50:00 - __main__ - INFO - Keluar dari mode inferensi.

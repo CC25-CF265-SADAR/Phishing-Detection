@@ -86,8 +86,6 @@ def extract_features(url_input):
     # Jika hasil normalisasi adalah string kosong (input tidak valid), hentikan proses
     if not current_url:
         logger.error(f"Input URL tidak valid atau kosong: '{url_input}'. Proses dihentikan.")
-        # Mengembalikan list dengan nilai default agar tidak merusak DataFrame
-        # Sesuaikan jumlah -1 dengan jumlah total fitur Anda (misalnya 21)
         return [-1] * 21 
 
     logger.debug(f"URL setelah normalisasi: {current_url}")
@@ -215,14 +213,6 @@ def extract_features(url_input):
     data_set.append(len(current_url))
 
     # 3. URL_Shortening
-    ## GANTI BLOK LAMA INI:
-    # match = re.search(r'1url\.com|...', current_url)
-    # if match:
-    #     data_set.append(-1)
-    # else:
-    #     data_set.append(1)
-
-    ## DENGAN BLOK BARU YANG LEBIH EFISIEN:
     if is_shortener:
         data_set.append(-1)
     else:
@@ -348,7 +338,6 @@ def extract_features(url_input):
     # 11.External_Resource_Ratio
     num_total_resources = 0
     num_same_domain_resources = 0
-    # request_url_feature_value = 1 # Logika lama untuk nilai -1, 0, 1
 
     if soup == -999:
         # request_url_feature_value = -1
@@ -392,18 +381,10 @@ def extract_features(url_input):
         
         percent_same_domain_resources = 100.0 if num_total_resources == 0 else (num_same_domain_resources / float(num_total_resources)) * 100
         data_set.append(round(percent_same_domain_resources, 2))
-        # Logika lama untuk nilai -1, 0, 1
-        # if num_total_resources > 0:
-        #     percent_same_domain = (num_same_domain_resources / float(num_total_resources)) * 100
-        #     if percent_same_domain < 40.0: request_url_feature_value = -1
-        #     else: request_url_feature_value = 1
-        # data_set.append(request_url_feature_value)
-
 
     # 12.External_Links_Ratio
     num_total_anchors = 0
     num_unsafe_anchors = 0
-    # anchor_feature_value = 1 # Logika lama
 
     if soup == -999:
         # anchor_feature_value = -1
@@ -433,17 +414,10 @@ def extract_features(url_input):
         
         percent_unsafe_anchors = 0.0 if num_total_anchors == 0 else (num_unsafe_anchors / float(num_total_anchors)) * 100 # Mengembalikan 0 jika tidak ada anchor, bukan 100
         data_set.append(round(percent_unsafe_anchors, 2))
-        # Logika lama
-        # if num_total_anchors > 0:
-        #     percentage_unsafe_anchors = (num_unsafe_anchors / float(num_total_anchors)) * 100
-        #     if percentage_unsafe_anchors < 50.0: anchor_feature_value = 1
-        #     else: anchor_feature_value = -1
-        # data_set.append(anchor_feature_value)
 
     # 13.External_CSS_and_JS_Resources
     num_total_links_scripts = 0
     num_same_domain_links_scripts = 0
-    # links_in_tags_feature_value = 1 # Logika lama
 
     if soup == -999:
         # links_in_tags_feature_value = -1
@@ -477,12 +451,6 @@ def extract_features(url_input):
         
         percent_same_domain_css_js = 100.0 if num_total_links_scripts == 0 else (num_same_domain_links_scripts / float(num_total_links_scripts)) * 100
         data_set.append(round(percent_same_domain_css_js, 2))
-        # Logika lama
-        # if num_total_links_scripts > 0:
-        #     percentage_same_domain = (num_same_domain_links_scripts / float(num_total_links_scripts)) * 100
-        #     if percentage_same_domain < 50.0: links_in_tags_feature_value = -1
-        #     else: links_in_tags_feature_value = 1
-        # data_set.append(links_in_tags_feature_value)
 
     # 14.External_Form_Submission
     sfh_feature_value = 1
@@ -535,19 +503,15 @@ def extract_features(url_input):
     data_set.append(page_content_feature_value)
 
     # 17.Number_of_Redirects
-    # redirect_feature_value = -1 # Logika lama
+
     num_redirects_val = -1
     if response == "":
         # redirect_feature_value = -1
         num_redirects_val = -1 # Gagal memuat
     elif hasattr(response, 'history'):
         num_redirects_val = len(response.history)
-        # Logika lama
-        # if num_redirects_val <= 1: redirect_feature_value = 1
-        # elif num_redirects_val >= 2 and num_redirects_val <= 4: redirect_feature_value = 0
-        # else: redirect_feature_value = -1
+
     data_set.append(num_redirects_val) # Menyimpan jumlah redirect aktual
-    # data_set.append(redirect_feature_value) # Logika lama
 
     # 18.Mouseover_Link_Manipulation
     on_mouseover_feature_value = 1

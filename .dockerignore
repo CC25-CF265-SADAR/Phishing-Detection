@@ -14,7 +14,6 @@ local_logs/
 *.db
 *.sqlite3
 
-# Abaikan file IDE/editor jika ada di root
 .idea/
 .vscode/
 *.sublime-project
@@ -23,6 +22,3 @@ local_logs/
 # File OS
 .DS_Store
 Thumbs.db
-
-# Mungkin file besar lain yang tidak ingin Anda masukkan ke image
-# data/raw_data_backup/

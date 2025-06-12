@@ -5,8 +5,6 @@ from tqdm import tqdm
 from typing import Iterable, Optional, Any
 
 # Impor logger dari modul logger.py Anda
-# Menggunakan impor relatif karena diasumsikan progress_display.py dan logger.py
-# berada dalam paket utils yang sama.
 try:
     from .logger import get_logger
 except ImportError:
@@ -76,7 +74,7 @@ def track_progress(
         if log_start_end:
             logger.log(log_level, f"Selesai: {description}. Total {processed_count} {unit} berhasil diproses.")
 
-# # --- Contoh Penggunaan (bisa dihapus atau dikomentari di file produksi) ---
+# # --- Contoh Penggunaan ---
 # if __name__ == "__main__":
 #     # Untuk menjalankan contoh ini, Anda mungkin perlu setup logger utama jika belum
 #     # Ini hanya untuk demonstrasi jika file ini dijalankan langsung

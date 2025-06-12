@@ -8,8 +8,6 @@ from typing import Optional, Tuple, Any, List, Dict # <--- TAMBAHKAN Dict DI SIN
 import numpy as np
 from fastapi.middleware.cors import CORSMiddleware
 
-# import pandas as pd # Hanya jika 'extract_features' Anda membutuhkannya secara internal
-
 from fastapi import FastAPI, Request, Form, HTTPException
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel 
@@ -19,9 +17,9 @@ from pydantic import BaseModel
 # Asumsi main.py ada di root proyek (sejajar dengan folder 'src')
 project_root_path = Path(__file__).resolve().parent
 if str(project_root_path) not in sys.path:
-    sys.path.append(str(project_root_path))  # <--- TAMBAHKAN INDENTASI (4 spasi)
+    sys.path.append(str(project_root_path)) 
     # Pesan ini akan muncul di konsol saat pertama kali server FastAPI/Uvicorn dimulai
-    print(f"Path root proyek ditambahkan: {project_root_path}") # <--- TAMBAHKAN INDENTASI (4 spasi)
+    print(f"Path root proyek ditambahkan: {project_root_path}") 
 
 
 # Impor fungsi ekstraksi fitur
@@ -31,16 +29,16 @@ try:
 except ImportError as e_fe:
     print(f"KRITIKAL: GAGAL mengimpor 'extract_features': {e_fe}. Aplikasi tidak akan dapat melakukan prediksi.")
     # Definisikan fungsi placeholder
-    def extract_features(url_string: str) -> list: # type: ignore
+    def extract_features(url_string: str) -> list: 
         # Pesan error di dalam fungsi, hanya akan terlempar jika fungsi ini dipanggil
         print("!!! MENGGUNAKAN FUNGSI 'extract_features' PLACEHOLDER KARENA IMPOR GAGAL !!!")
-        raise RuntimeError( # Ini adalah line 39 jika dihitung dari 'try'
+        raise RuntimeError( 
             "Fungsi 'extract_features' yang valid tidak dapat dimuat. "
             "Periksa path dan file src/features/feature_extractor_shortener.py, serta dependensinya."
         )
 except Exception as e_other_import_error: # Menangkap error lain saat impor
     print(f"KRITIKAL: Error tak terduga saat mengimpor 'extract_features': {e_other_import_error}.")
-    def extract_features(url_string: str) -> list: # type: ignore
+    def extract_features(url_string: str) -> list: 
         print(f"!!! MENGGUNAKAN FUNGSI 'extract_features' PLACEHOLDER KARENA ERROR IMPOR: {e_other_import_error} !!!")
         raise RuntimeError(
             f"Error tak terduga saat impor extract_features: {e_other_import_error}"
@@ -50,9 +48,6 @@ except Exception as e_other_import_error: # Menangkap error lain saat impor
 
 origins = [
     "*", 
-    # "http://localhost", 
-    # "http://localhost:3000", # Untuk frontend development
-    # "https://domain-frontend-anda.com", # Untuk produksi
 ]
 
 # Inisialisasi Aplikasi FastAPI
@@ -71,16 +66,13 @@ app.add_middleware(
 )
 
 # --- 3. Variabel Global untuk Model ---
-
-# Kita akan menggunakan dictionary untuk menyimpan state aplikasi seperti model
+# Menggunakan dictionary untuk menyimpan state aplikasi seperti model
 # Ini lebih bersih daripada menggunakan banyak variabel global.
 app_state: Dict[str, Any] = {}
 
-# Path ke model Anda yang sudah dilatih
 SAVED_MODEL_PATH = project_root_path / "models_trained" / "best_recall_model_url shortener case.h5"
-# SAVED_PREPROCESSOR_PATH = None # Jika Anda punya preprocessor terpisah
 
-# --- BARU: Lifespan Event Handler ---
+
 from contextlib import asynccontextmanager
 
 @asynccontextmanager
@@ -93,28 +85,13 @@ async def lifespan(current_app: FastAPI):
             from tensorflow import keras # Impor di sini untuk menjaga scope
             model_to_load = keras.models.load_model(SAVED_MODEL_PATH)
             print(f"Model Keras berhasil dimuat dari: {SAVED_MODEL_PATH}")
-            # model_to_load.summary() # Opsional
         else:
             print(f"ERROR KRITIKAL: File model TIDAK DITEMUKAN di: {SAVED_MODEL_PATH}. Aplikasi mungkin tidak berfungsi dengan benar.")
     except Exception as e:
         print(f"ERROR KRITIKAL saat memuat model Keras: {e}")
-        # Anda bisa memutuskan untuk raise error di sini jika model adalah dependensi kritis
-        # raise RuntimeError(f"Tidak dapat memuat model: {e}") from e
+
     
     app_state["loaded_model"] = model_to_load
-    
-    # Jika Anda punya preprocessor terpisah:
-    # preprocessor_to_load = None
-    # if SAVED_PREPROCESSOR_PATH and SAVED_PREPROCESSOR_PATH.exists():
-    #     try:
-    #         import joblib
-    #         preprocessor_to_load = joblib.load(SAVED_PREPROCESSOR_PATH)
-    #         print(f"Preprocessor berhasil dimuat dari: {SAVED_PREPROCESSOR_PATH}")
-    #     except Exception as e:
-    #         print(f"Error saat memuat preprocessor: {e}")
-    # elif SAVED_PREPROCESSOR_PATH:
-    #     print(f"PERINGATAN: File preprocessor TIDAK DITEMUKAN di: {SAVED_PREPROCESSOR_PATH}")
-    # app_state["preprocessor"] = preprocessor_to_load
 
     print("--- Startup Aplikasi Selesai ---")
     yield # Ini adalah titik di mana aplikasi akan berjalan
@@ -122,27 +99,23 @@ async def lifespan(current_app: FastAPI):
     print("--- Aplikasi Berhenti ---")
     app_state.clear() # Bersihkan state jika perlu
 
-# Terapkan lifespan handler ke aplikasi FastAPI Anda
+# Terapkan lifespan handler ke aplikasi FastAPI 
 app.router.lifespan_context = lifespan
-
-
 
 # --- 4. Pydantic Models untuk Validasi Data API ---
 class URLInput(BaseModel):
-    url: str # Pydantic akan memvalidasi bahwa ini adalah URL yang valid # <--- TAMBAHKAN INDENTASI
+    url: str # Pydantic akan memvalidasi bahwa ini adalah URL yang valid 
 
-class PredictionResponse(BaseModel): # Pastikan ini juga di-indentasi dengan benar jika ada setelahnya
-    url: str                             # <--- TAMBAHKAN INDENTASI
-    predicted_type: str                  # <--- TAMBAHKAN INDENTASI
-    phishing_probability: Optional[float] = None # <--- TAMBAHKAN INDENTASI
-    error: Optional[str] = None          # <--- TAMBAHKAN INDENTASI
+class PredictionResponse(BaseModel): 
+    url: str                             
+    predicted_type: str                  
+    phishing_probability: Optional[float] = None 
+    error: Optional[str] = None          
 
 # --- 5. Fungsi Pembantu untuk Prediksi ---
 # --- Fungsi Pembantu untuk Prediksi (get_prediction_for_url) ---
-# Modifikasi sedikit untuk mengambil model dari app_state
 def get_prediction_for_url(url_string: str, threshold: float = 0.5) -> Tuple[Optional[str], Optional[float], Optional[str]]:
     model = app_state.get("loaded_model")
-    # preprocessor = app_state.get("preprocessor") # Jika Anda menggunakan preprocessor terpisah
 
     if not model: # Periksa model dari app_state
         return "Error", None, "Model tidak siap atau tidak berhasil dimuat."
@@ -162,14 +135,8 @@ def get_prediction_for_url(url_string: str, threshold: float = 0.5) -> Tuple[Opt
             return "Error", None, msg
 
         features_2d = features_1d.reshape(1, -1)
-        
-        # Jika Anda menggunakan preprocessor terpisah:
-        # features_processed = features_2d
-        # if preprocessor:
-        #     features_processed = preprocessor.transform(features_2d)
-        # else:
-        #     features_processed = features_2d
-        features_processed = features_2d # Karena kita asumsikan preprocessor tidak ada/sudah di feature_extractor_shortener
+
+        features_processed = features_2d # Karena preprocessor sudah di feature_extractor_shortener
 
         prediction_proba = model.predict(features_processed)
         
@@ -248,10 +215,9 @@ def get_prediction_for_url(url_string: str, threshold: float = 0.5) -> Tuple[Opt
 
 @app.post("/api/predict", response_model=PredictionResponse)
 async def api_predict_url(item: URLInput):
-    # BARIS-BARIS BERIKUTNYA HARUS DI-INDENTASI
-    predicted_type, proba, err_msg = get_prediction_for_url(str(item.url)) # <--- TAMBAHKAN INDENTASI
+    predicted_type, proba, err_msg = get_prediction_for_url(str(item.url)) 
 
-    if err_msg:                                                               # <--- TAMBAHKAN INDENTASI (dst.)
+    if err_msg:                                                               
         # Untuk API, lebih baik mengembalikan status error HTTP yang sesuai jika memungkinkan
         # raise HTTPException(status_code=400, detail=err_msg) # Contoh jika input buruk
         return PredictionResponse(url=str(item.url), predicted_type="Error", error=err_msg)
@@ -266,11 +232,11 @@ async def api_predict_url(item: URLInput):
 
 if __name__ == "__main__":
     import uvicorn
-    # Port akan diambil dari variabel lingkungan PORT jika ada (digunakan oleh Railway)
+    # Port akan diambil dari variabel lingkungan PORT jika ada
     # Jika tidak, default ke 8000 untuk development lokal dengan Uvicorn
     app_port = int(os.environ.get('PORT', 8000))
 
     print(f"Menjalankan Uvicorn server di http://0.0.0.0:{app_port}")
 
-    # --- reload akan memantau perubahan kode dan me-restart server (hanya untuk development)
+    # --- reload akan memantau perubahan kode dan me-restart serverA
     uvicorn.run("main:app", host="0.0.0.0", port=app_port, reload=True, log_level="info")
